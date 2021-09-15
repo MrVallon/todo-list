@@ -1,0 +1,11 @@
+.display-todo-title {
+   border-bottom: 1px solid #8080802b;
+   padding: 10px 0;
+}
+
+.display-buttons-wrapper {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   padding: 8px 15px;
+}
