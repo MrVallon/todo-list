@@ -12,32 +12,30 @@ const DisplayTodo = ({
    handleCloseButton,
    handleEditTodo,
    handleRemoveTodo
-}) => {
-   return (
-      <Dialog onClose={handleCloseButton} open={isOpen}>
-         <MuiDialogTitle>
-            <div className="display-todo-title">Your Todo</div>
-         </MuiDialogTitle>
+}) => (
+   <Dialog onClose={handleCloseButton} open={isOpen}>
+      <MuiDialogTitle>
+         <div className="display-todo-title">Your Todo</div>
+      </MuiDialogTitle>
 
-         <MuiDialogContent>
+      <MuiDialogContent>
+         <div>
+            <h2>{formData.todoName}</h2>
+            <div>{formData.todoNote}</div>
+         </div>
+      </MuiDialogContent>
+
+      <MuiDialogActions>
+         <div className="display-buttons-wrapper">
+            <Button color="secondary" variant="outlined" onClick={handleRemoveTodo}>Remove</Button>
+
             <div>
-               <h2>{formData.todoName}</h2>
-               <div>{formData.todoNote}</div>
+               <Button color="primary" onClick={handleCloseButton}>Close</Button>
+               <Button color="primary" onClick={handleEditTodo}>Edit</Button>
             </div>
-         </MuiDialogContent>
-
-         <MuiDialogActions>
-            <div className="display-buttons-wrapper">
-               <Button color="secondary" variant="outlined" onClick={handleRemoveTodo}>Remove</Button>
-
-               <div>
-                  <Button color="primary" onClick={handleCloseButton}>Close</Button>
-                  <Button color="primary" onClick={handleEditTodo}>Edit</Button>
-               </div>
-            </div>
-         </MuiDialogActions>
-      </Dialog >
-   )
-}
+         </div>
+      </MuiDialogActions>
+   </Dialog >
+)
 
 export default DisplayTodo;
