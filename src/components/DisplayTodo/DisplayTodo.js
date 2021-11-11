@@ -16,7 +16,7 @@ const DisplayTodo = ({
    return (
       <Dialog onClose={handleCloseButton} open={isOpen}>
          <MuiDialogTitle>
-            <div className="display-todo-title">Your Todo</div>
+            <div className="display-todo-title">Your Todos</div>
          </MuiDialogTitle>
 
          <MuiDialogContent>
